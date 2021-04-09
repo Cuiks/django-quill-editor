@@ -97,3 +97,28 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
+
+# Quill config
+QUILL_CONFIGS = {
+    "default": {
+        'theme': 'snow',
+        'modules': {
+            'syntax': True,
+            'toolbar': [
+                [
+                    {'font': []},
+                    {'header': []},
+                    {'align': []},
+                    'bold', 'italic', 'underline', 'strike', 'blockquote',
+                    {'color': []},
+                    {'background': []},
+                ],
+                ['code-block', 'link', 'image', 'video'],
+                ['clean'],
+            ],
+            'imageResize': {  # open imageResize
+                'displaySize': True
+            }
+        }
+    }
+}

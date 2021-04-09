@@ -9,6 +9,10 @@
 
   <!-- django-quill-editor Media -->
   {% include 'django_quill/media.html' %}
+  <!-- Quill resize-image.js -->
+  <!-- image-resize.min.js must import after Quill.js. like this -->
+  <script src="https://cdn.jsdelivr.net/npm/quill-image-resize-module@3.0.0/image-resize.min.js"></script>
+
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">

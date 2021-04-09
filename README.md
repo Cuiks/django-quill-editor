@@ -1,3 +1,75 @@
+## django-quill-editor with image-resize
+
+
+
+django-quill-editor  @[LeeHanYeong/django-quill-editor](https://github.com/LeeHanYeong/django-quill-editor)
+
+quill-image-resize-module  @[kensnyder/quill-image-resize-module](https://github.com/kensnyder/quill-image-resize-module)
+
+This repo forked from [LeeHanYeong/django-quill-editor](https://github.com/LeeHanYeong/django-quill-editor), add [django-quill-editor](https://github.com/LeeHanYeong/django-quill-editor)。
+
+By modify the demo proj(`playground`),achieved django-quill-editor resize image.
+
+`quill-image-resize-module@3.0.0/image-resize.min.js` was introduced in the modification by the way of cdn https://cdn.jsdelivr.net/npm/quill-image-resize-module@3.0.0/image-resize.min.js.
+
+### modified
+
+`django-quill-editor/playground/templates/base.html`  line12 add
+
+```html
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- django-quill-editor Media -->
+  {% include 'django_quill/media.html' %}
+  <!-- Quill resize-image.js -->
+  <!-- image-resize.min.js must import after Quill.js. like this -->
+  <script src="https://cdn.jsdelivr.net/npm/quill-image-resize-module@3.0.0/image-resize.min.js"></script>
+
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <title>django-quill-editor</title>
+</head>
+```
+
+`django-quill-editor/playground/config/settings.py` line101 ass
+
+```python
+# Quill config
+QUILL_CONFIGS = {
+    "default": {
+        'theme': 'snow',
+        'modules': {
+            'syntax': True,
+            'toolbar': [
+                [
+                    {'font': []},
+                    {'header': []},
+                    {'align': []},
+                    'bold', 'italic', 'underline', 'strike', 'blockquote',
+                    {'color': []},
+                    {'background': []},
+                ],
+                ['code-block', 'link', 'image', 'video'],
+                ['clean'],
+            ],
+            'imageResize': {  # open imageResize
+                'displaySize': True
+            }
+        }
+    }
+}
+```
+
+
+
+------
+
 # django-quill-editor
 
 ![PyPI](https://img.shields.io/pypi/v/django-quill-editor)
