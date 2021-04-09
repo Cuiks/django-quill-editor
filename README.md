@@ -6,7 +6,7 @@ django-quill-editor  @[LeeHanYeong/django-quill-editor](https://github.com/LeeHa
 
 quill-image-resize-module  @[kensnyder/quill-image-resize-module](https://github.com/kensnyder/quill-image-resize-module)
 
-This repo forked from [LeeHanYeong/django-quill-editor](https://github.com/LeeHanYeong/django-quill-editor), add [django-quill-editor](https://github.com/LeeHanYeong/django-quill-editor)。
+This repo forked from [LeeHanYeong/django-quill-editor](https://github.com/LeeHanYeong/django-quill-editor), add [quill-image-resize-module](https://github.com/kensnyder/quill-image-resize-module)。
 
 By modify the demo proj(`playground`),achieved django-quill-editor resize image.
 
