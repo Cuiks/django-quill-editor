@@ -37,7 +37,7 @@ By modify the demo proj(`playground`),achieved django-quill-editor resize image.
 </head>
 ```
 
-`django-quill-editor/playground/config/settings.py` line101 ass
+`django-quill-editor/playground/config/settings.py` line101 add
 
 ```python
 # Quill config
